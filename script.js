@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const id = this.dataset.id;
             const data = experiencesData[id];
             
-            experienceModal.querySelector('.modal-photo').src = `images/magang-${id}.jpg`;
+            experienceModal.querySelector('.modal-photo').src = `img/magang-${id}.jpg`;
             experienceModal.querySelector('.modal-title').textContent = data.title;
             experienceModal.querySelector('.modal-company span').textContent = data.company;
             experienceModal.querySelector('.modal-time span').textContent = data.start;
