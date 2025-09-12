@@ -132,9 +132,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageModalCloseBtn = imageModal.querySelector('.close-btn');
 
     const galleryPhotos = [
-        'images/magang-1.jpg',
-        'images/magang-2.jpg',
-        'images/magang-3.jpg'
+        'img/magang-1.jpg',
+        'img/magang-2.jpg',
+        'img/magang-3.jpg'
     ];
 
     showGalleryBtn.addEventListener('click', () => {
@@ -226,32 +226,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const certificationsData = [
         {
             id: 'cert1',
-            thumb: 'images/sertifikat-1-thumb.jpg',
-            full: 'images/sertifikat-1-full.jpg',
+            thumb: 'img/sertifikat-1-thumb.jpg',
+            full: 'img/sertifikat-1-full.jpg',
             tahun: 2022,
             lembaga: 'Dicoding Academy',
             hasil: 'Penyelesaian program "Belajar Machine Learning untuk Pemula".'
         },
         {
             id: 'cert2',
-            thumb: 'images/sertifikat-2-thumb.jpg',
-            full: 'images/sertifikat-2-full.jpg',
+            thumb: 'img/sertifikat-2-thumb.jpg',
+            full: 'img/sertifikat-2-full.jpg',
             tahun: 2023,
             lembaga: 'BNSP',
             hasil: 'Sertifikasi Kompetensi Analis Agribisnis.'
         },
         {
             id: 'cert3',
-            thumb: 'images/sertifikat-3-thumb.jpg',
-            full: 'images/sertifikat-3-full.jpg',
+            thumb: 'img/sertifikat-3-thumb.jpg',
+            full: 'img/sertifikat-3-full.jpg',
             tahun: 2024,
             lembaga: 'Coursera',
             hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
         },
         {
             id: 'cert3',
-            thumb: 'images/sertifikat-3-thumb.jpg',
-            full: 'images/sertifikat-3-full.jpg',
+            thumb: 'img/sertifikat-3-thumb.jpg',
+            full: 'img/sertifikat-3-full.jpg',
             tahun: 2024,
             lembaga: 'Coursera',
             hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
