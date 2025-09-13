@@ -271,49 +271,49 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 'cert1',
             thumb: 'img/sertifikat-1-thumb.jpg',
             full: 'img/sertifikat-1-full.jpg',
-            tahun: 2022,
-            lembaga: 'Dicoding Academy',
-            hasil: 'Penyelesaian program "Belajar Machine Learning untuk Pemula".'
+            tahun: 2025,
+            lembaga: 'PT Learnbyte Edukarya Nusantara',
+            hasil: 'Penyelesaian program "Microsoft Excel Level Menengah".'
         },
         {
             id: 'cert2',
             thumb: 'img/sertifikat-2-thumb.jpg',
             full: 'img/sertifikat-2-full.jpg',
-            tahun: 2023,
-            lembaga: 'BNSP',
-            hasil: 'Sertifikasi Kompetensi Analis Agribisnis.'
+            tahun: 2025,
+            lembaga: 'PT Learnbyte Edukarya Nusantara',
+            hasil: 'Penyelesaian program "Microsoft Excel Level Menengah"'
         },
         {
             id: 'cert3',
             thumb: 'img/sertifikat-3-thumb.jpg',
             full: 'img/sertifikat-3-full.jpg',
-            tahun: 2024,
-            lembaga: 'Coursera',
-            hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
+            tahun: 2023,
+            lembaga: 'Educational Testing Service',
+            hasil: 'Sertifikasi "TOEFL".'
         },
         {
             id: 'cert4',
             thumb: 'img/sertfikat-4-thumb.jpg',
             full: 'img/sertfikat-4-full.jpg',
-            tahun: 2024,
-            lembaga: 'Coursera',
-            hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
+            tahun: 2023,
+            lembaga: 'Trust Training Partner',
+            hasil: 'Sertifikasi "Teknologi dan Informasi".'
         },
         {
             id: 'cert5',
             thumb: 'img/sertifikat-5-thumb.jpg',
             full: 'img/sertifikat-5-full.jpg',
-            tahun: 2024,
-            lembaga: 'Coursera',
-            hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
+            tahun: 2023,
+            lembaga: 'PT BISI International Tbk',
+            hasil: 'Sertifikasi "Magang Merdeka Belajar Kampus Merdeka".'
         },
         {
             id: 'cert6',
             thumb: 'img/sertifikat-6-thumb.jpg',
             full: 'img/sertifikat-6-full.jpg',
-            tahun: 2024,
-            lembaga: 'Coursera',
-            hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
+            tahun: 2023,
+            lembaga: 'PT Mavens Mitra Perkasa',
+            hasil: 'Sertifikasi "Magang Kerja" Analisis nilai tukar petani.'
         }
         
     ];
