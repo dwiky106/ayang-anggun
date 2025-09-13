@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.remove('active');
             navText.textContent = 'Lihat Selengkapnya';
             dropdownIcon.textContent = '▼';
-        }
-        );
+        });
     });
 
     document.addEventListener('click', function(e) {
@@ -62,45 +61,90 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Data Pengalaman Magang
     const experiencesData = {
         1: {
-            title: "Magang PT. Agribisnis Jaya ",
+            title: "Magang di Perusahaan A",
             company: "PT. Agribisnis Jaya",
             start: "Januari 2023",
             end: "Juni 2023",
             result: "Membuat laporan analisis pasar dan meningkatkan efisiensi panen sebesar 15%.",
             skills: "Analisis data, Manajemen proyek, Komunikasi",
-            fullDesc: "Selama magang, saya bertanggung jawab melakukan analisis data hasil panen menggunakan tools berbasis IoT. Saya juga berpartisipasi aktif dalam tim manajemen proyek untuk mengimplementasikan strategi baru yang berhasil meningkatkan efisiensi panen."
+            fullDesc: "Selama magang, saya bertanggung jawab melakukan analisis data hasil panen menggunakan tools berbasis IoT. Saya juga berpartisipasi aktif dalam tim manajemen proyek untuk mengimplementasikan strategi baru yang berhasil meningkatkan efisiensi panen.",
+            images: [
+                'img/magang-1.jpg',
+                'img/magang-3.jpg',
+                'img/magang-2.jpg'
+            ]
         },
         2: {
-            title: "Magang di PT. Petani Modern",
+            title: "Magang di Perusahaan B",
             company: "PT. Petani Modern",
             start: "Juli 2022",
             end: "Desember 2022",
             result: "Mengembangkan sistem irigasi otomatis dan menyusun laporan evaluasi kualitas produk.",
             skills: "Sistem irigasi, Evaluasi kualitas, Riset lapangan",
-            fullDesc: "Saya terlibat dalam proyek pengembangan sistem irigasi otomatis di lahan budidaya hidroponik. Selain itu, saya juga melakukan riset dan evaluasi untuk memastikan kualitas produk memenuhi standar pasar."
+            fullDesc: "Saya terlibat dalam proyek pengembangan sistem irigasi otomatis di lahan budidaya hidroponik. Selain itu, saya juga melakukan riset dan evaluasi untuk memastikan kualitas produk memenuhi standar pasar.",
+            images: [
+                'img/magang-2.jpg',
+                'img/magang-1.jpg',
+                'img/magang-3.jpg'
+            ]
         },
         3: {
-            title: "Magang di CV. Horti Sejahtera",
+            title: "Magang di Perusahaan C",
             company: "CV. Horti Sejahtera",
             start: "Maret 2021",
             end: "Agustus 2021",
             result: "Membantu proses pemasaran produk sayuran organik dan menyusun strategi penjualan.",
             skills: "Pemasaran digital, Analisis tren pasar, Penjualan",
-            fullDesc: "Pengalaman ini berfokus pada pemasaran produk hortikultura. Saya belajar banyak tentang strategi pemasaran digital, mengelola media sosial perusahaan, dan menganalisis tren pasar untuk meningkatkan penjualan produk."
+            fullDesc: "Pengalaman ini berfokus pada pemasaran produk hortikultura. Saya belajar banyak tentang strategi pemasaran digital, mengelola media sosial perusahaan, dan menganalisis tren pasar untuk meningkatkan penjualan produk.",
+            images: [
+                'img/magang-3.jpg',
+                'img/magang-2.jpg',
+                'img/magang-1.jpg'
+            ]
         }
     };
 
     const experienceModal = document.getElementById('experience-modal');
     const closeBtn = experienceModal.querySelector('.close-btn');
+    const swiperWrapper = experienceModal.querySelector('.experience-swiper .swiper-wrapper');
+    let mySwiper = null;
 
     document.querySelectorAll('.btn-detail').forEach(button => {
         button.addEventListener('click', function() {
             const id = this.dataset.id;
             const data = experiencesData[id];
             
-            experienceModal.querySelector('.modal-photo').src = `img/magang-${id}.jpg`;
+            if (mySwiper) {
+                mySwiper.destroy(true, true);
+            }
+            swiperWrapper.innerHTML = '';
+            
+            data.images.forEach(imageSrc => {
+                const swiperSlide = document.createElement('div');
+                swiperSlide.classList.add('swiper-slide');
+                swiperSlide.innerHTML = `<img src="${imageSrc}" alt="Gambar Magang" class="modal-photo">`;
+                swiperWrapper.appendChild(swiperSlide);
+            });
+
+            mySwiper = new Swiper('.experience-swiper', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+
             experienceModal.querySelector('.modal-title').textContent = data.title;
             experienceModal.querySelector('.modal-company span').textContent = data.company;
             experienceModal.querySelector('.modal-time span').textContent = data.start;
@@ -115,13 +159,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     closeBtn.addEventListener('click', () => {
         experienceModal.style.display = 'none';
+        if (mySwiper) {
+            mySwiper.destroy(true, true);
+            mySwiper = null;
+        }
     });
 
     window.addEventListener('click', (e) => {
         if (e.target === experienceModal) {
             experienceModal.style.display = 'none';
+            if (mySwiper) {
+                mySwiper.destroy(true, true);
+                mySwiper = null;
+            }
         }
     });
+
+    // Data Galeri
+    const galleryPhotos = [
+        'img/magang-1.jpg',
+        'img/magang-2.jpg',
+        'img/magang-3.jpg',
+        'img/magang-2.jpg',
+        'img/magang-1.jpg',
+        'img/magang-1.jpg'
+    ];
 
     const galleryModal = document.getElementById('gallery-modal');
     const galleryGrid = galleryModal.querySelector('.gallery-grid');
@@ -130,12 +192,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageModal = document.getElementById('image-modal');
     const imageModalPhoto = imageModal.querySelector('.modal-image');
     const imageModalCloseBtn = imageModal.querySelector('.close-btn');
-
-    const galleryPhotos = [
-        'img/magang-1.jpg',
-        'img/magang-2.jpg',
-        'img/magang-3.jpg'
-    ];
 
     showGalleryBtn.addEventListener('click', () => {
         galleryGrid.innerHTML = '';
@@ -160,7 +216,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Fitur baru untuk menampilkan foto galeri secara besar
     galleryGrid.addEventListener('click', function(e) {
         if (e.target.classList.contains('gallery-photo')) {
             imageModalPhoto.src = e.target.src;
@@ -177,11 +232,6 @@ document.addEventListener('DOMContentLoaded', function() {
             imageModal.style.display = 'none';
         }
     });
-
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // --- Bagian yang Diubah untuk Animasi Berulang ---
     
     // Fungsionalitas untuk chart melingkar
     const circularCharts = document.querySelectorAll('.circular-chart');
@@ -203,26 +253,18 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 clearInterval(interval);
             }
-        }, 20); // Kecepatan animasi, 20ms per langkah
+        }, 20);
     }
 
-    // Fungsi untuk memulai animasi pada semua chart
     function startAllAnimations() {
         circularCharts.forEach(animateChart);
     }
     
-    // Panggil animasi pertama kali
     startAllAnimations();
 
-    // Set interval untuk memulai ulang animasi setiap 2 detik
-    setInterval(startAllAnimations, 2000); // 2000ms = 2 detik
-    
-    // --- Akhir Bagian yang Diubah ---
-});
-document.addEventListener('DOMContentLoaded', function() {
-    // ... (kode JavaScript yang sudah ada) ...
+    setInterval(startAllAnimations, 2000);
 
-    // Data Sertifikasi (Anda dapat menyesuaikan ini)
+    // Data Sertifikasi
     const certificationsData = [
         {
             id: 'cert1',
@@ -247,24 +289,15 @@ document.addEventListener('DOMContentLoaded', function() {
             tahun: 2024,
             lembaga: 'Coursera',
             hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
-        },
-        {
-            id: 'cert3',
-            thumb: 'img/sertifikat-3-thumb.jpg',
-            full: 'img/sertifikat-3-full.jpg',
-            tahun: 2024,
-            lembaga: 'Coursera',
-            hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
         }
     ];
 
     const certificationGrid = document.querySelector('.certification-grid');
     const showCertificatesBtn = document.getElementById('show-certificates-btn');
     const certificationModal = document.getElementById('certification-modal');
-    const modalCloseBtn = certificationModal.querySelector('.close-btn');
+    const certModalCloseBtn = certificationModal.querySelector('.close-btn');
     const certificationDetailContainer = certificationModal.querySelector('.certification-detail-container');
 
-    // Mengisi grid foto kecil di halaman utama
     certificationsData.forEach(cert => {
         const img = document.createElement('img');
         img.src = cert.thumb;
@@ -273,9 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
         certificationGrid.appendChild(img);
     });
 
-    // Menampilkan modal dengan detail sertifikasi
     showCertificatesBtn.addEventListener('click', () => {
-        // Kosongkan container detail sebelum mengisi ulang
         certificationDetailContainer.innerHTML = '';
         
         certificationsData.forEach(cert => {
@@ -295,19 +326,13 @@ document.addEventListener('DOMContentLoaded', function() {
         certificationModal.style.display = 'flex';
     });
 
-    // Menutup modal saat tombol silang diklik
-    modalCloseBtn.addEventListener('click', () => {
+    certModalCloseBtn.addEventListener('click', () => {
         certificationModal.style.display = 'none';
     });
 
-    // Menutup modal saat area luar modal diklik
     window.addEventListener('click', (e) => {
         if (e.target === certificationModal) {
             certificationModal.style.display = 'none';
         }
     });
-
-    // ... (kode JavaScript lainnya) ...
 });
-
-
