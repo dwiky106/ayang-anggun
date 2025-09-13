@@ -293,8 +293,8 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 'cert4',
-            thumb: 'img/sertifikat-4-thumb.jpg',
-            full: 'img/sertifikat-4-full.jpg',
+            thumb: 'img/sertfikat-4-thumb.jpg',
+            full: 'img/sertfikat-4-full.jpg',
             tahun: 2024,
             lembaga: 'Coursera',
             hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
