@@ -87,8 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             fullDesc: "",
             images: [
                 'img/magang-mmp-1.jpg',
-                'img/magang-mmp-2.jpg',
-                'img/magang-mmp-3.jpg'
+                'img/magang-mmp-2.jpg'
             ]
         },
         3: {
@@ -182,7 +181,6 @@ document.addEventListener('DOMContentLoaded', function() {
         'img/magang-cwe-3.jpg',
         'img/magang-mmp-1.jpg',
         'img/magang-mmp-2.jpg',
-        'img/magang-mmp-3.jpg',
         'img/magang-bisi-1.jpg',
         'img/magang-bisi-2.jpg',
         'img/magang-bisi-3.jpg'
