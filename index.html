@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Anggun Putri Cahyani</title>
+    <title>Portofolio Agribisnis - Anggun Putri Cahyani</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    </head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
 <body>
     <header class="header">
         <h1 class="logo">Portofolio</h1>
         <div class="dropdown">
             <button id="nav-toggle" class="nav-toggle">
                 <span class="nav-text">Lihat Selengkapnya</span>
-                <span class="dropdown-icon">&#9660;</span> </button>
+                <span class="dropdown-icon">&#9660;</span>
+            </button>
             <nav id="nav-menu" class="nav-menu">
                 <a href="#visi-misi">Visi Misi</a>
                 <a href="#pengalaman">Pengalaman Magang/Kerja</a>
@@ -32,7 +34,7 @@
                     <img src="img/foto-profil-agribisnis.jpg" alt="Foto Profil" class="profile-photo">
                 </div>
                 <div class="profile-text">
-                    <h2 class="profile-name">Anggun Putri Cahyani S.P</h2>
+                    <h2 class="profile-name">Ayang nen</h2>
                     <p class="profile-bio">Tuliskan apa saja tentang saya maksimal 25 kata. Teks ini akan menjelaskan secara singkat diri Anda.</p>
                 </div>
             </div>
@@ -74,17 +76,6 @@
                         <p>Saya terampil dalam strategi pemasaran produk agribisnis dan analisis pasar.</p>
                     </div>
                 </div>
-                <div class="skill-box">
-                    <i class="fa-solid fa-comments-dollar skill-icon"></i>
-                    <p class="skill-name">Pemasaran Agribisnis</p>
-                    <button class="dropdown-toggle">
-                        <span class="toggle-text">Detail</span>
-                        <i class="fas fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <p>Saya terampil dalam strategi pemasaran produk agribisnis dan analisis pasar.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -104,162 +95,173 @@
 
         <section id="pengalaman" class="content-section experience-section">
             <h3 class="section-title">Pengalaman Magang/Kerja</h3>
-            <div class="experience-grid"> <div class="experience-box" data-id="1">
+            <div class="experience-grid">
+                <div class="experience-box" data-id="1">
                     <div class="experience-image-container">
-                        <img src="img/magang-1.jpg" alt="Magang Pertama" class="experience-photo">
+                        <img src="img/magang-1.jpg" alt="Magang 1" class="experience-photo">
                     </div>
-                    <h4 class="experience-title">Magang di PT. Agribisnis Jaya</h4>
-                    <p class="experience-short-desc">Selama magang, saya bertanggung jawab melakukan analisis data hasil panen menggunakan tools berbasis IoT</p>
+                    <h4 class="experience-title">Magang di Perusahaan A</h4>
+                    <p class="experience-short-desc">Deskripsi singkat magang di perusahaan A.</p>
                     <button class="btn btn-detail" data-id="1">Selengkapnya</button>
                 </div>
                 <div class="experience-box" data-id="2">
                     <div class="experience-image-container">
                         <img src="img/magang-2.jpg" alt="Magang 2" class="experience-photo">
                     </div>
-                    <h4 class="experience-title">Magang di PT. Petani Modern</h4>
-                    <p class="experience-short-desc">Saya terlibat dalam proyek pengembangan sistem irigasi otomatis di lahan budidaya hidroponik.</p>
+                    <h4 class="experience-title">Magang di Perusahaan B</h4>
+                    <p class="experience-short-desc">Deskripsi singkat magang di perusahaan B.</p>
                     <button class="btn btn-detail" data-id="2">Selengkapnya</button>
                 </div>
                 <div class="experience-box" data-id="3">
                     <div class="experience-image-container">
                         <img src="img/magang-3.jpg" alt="Magang 3" class="experience-photo">
                     </div>
-                    <h4 class="experience-title">Magang di CV. Horti Sejahtera</h4>
-                    <p class="experience-short-desc">Pengalaman ini berfokus pada pemasaran produk hortikultura. Saya belajar banyak tentang strategi pemasaran digital</p>
+                    <h4 class="experience-title">Magang di Perusahaan C</h4>
+                    <p class="experience-short-desc">Deskripsi singkat magang di perusahaan C.</p>
                     <button class="btn btn-detail" data-id="3">Selengkapnya</button>
+                </div>
+            </div>
+            
+            <div class="gallery-btn-container">
+                <button id="show-gallery" class="btn btn-gallery">
+                    <i class="fas fa-images"></i> Lihat Galeri Magang
+                </button>
+            </div>
+        </section>
+
+        <section id="proyek" class="content-section">
+            <h3 class="section-title">Proyek</h3>
+            <div class="project-container">
+                <div class="project-box">
+                    <div class="chart-container">
+                        <div class="circular-chart" data-percentage="90">
+                            <svg viewBox="0 0 36 36" class="circular-chart-svg">
+                                <path class="circle-bg"
+                                    d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle"
+                                    stroke-dasharray="90, 100"
+                                    d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                            </svg>
+                            <div class="percentage">90%</div>
+                        </div>
+                    </div>
+                    <h4 class="project-title">Proyek Sistem Irigasi Otomatis</h4>
+                    <div class="project-details">
+                        <p><strong>Waktu:</strong> Maret 2023 - Juli 2023</p>
+                        <p><strong>Fokus Proyek:</strong> Mengembangkan dan menerapkan sistem irigasi berbasis sensor untuk menghemat penggunaan air.</p>
+                        <p><strong>Keberhasilan:</strong> Penghematan air sebesar 30% dan peningkatan hasil panen 15%.</p>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="chart-container">
+                        <div class="circular-chart" data-percentage="85">
+                            <svg viewBox="0 0 36 36" class="circular-chart-svg">
+                                <path class="circle-bg"
+                                    d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle"
+                                    stroke-dasharray="85, 100"
+                                    d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                            </svg>
+                            <div class="percentage">85%</div>
+                        </div>
+                    </div>
+                    <h4 class="project-title">Aplikasi Analisis Tanah</h4>
+                    <div class="project-details">
+                        <p><strong>Waktu:</strong> Januari 2024 - Sekarang</p>
+                        <p><strong>Fokus Proyek:</strong> Membuat aplikasi mobile untuk menganalisis kandungan tanah secara cepat.</p>
+                        <p><strong>Keberhasilan:</strong> Pengurangan biaya pengujian tanah hingga 50% untuk petani kecil.</p>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="chart-container">
+                        <div class="circular-chart" data-percentage="75">
+                            <svg viewBox="0 0 36 36" class="circular-chart-svg">
+                                <path class="circle-bg"
+                                    d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle"
+                                    stroke-dasharray="75, 100"
+                                    d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                            </svg>
+                            <div class="percentage">75%</div>
+                        </div>
+                    </div>
+                    <h4 class="project-title">Model Prediksi Hama</h4>
+                    <div class="project-details">
+                        <p><strong>Waktu:</strong> Mei 2022 - Desember 2022</p>
+                        <p><strong>Fokus Proyek:</strong> Mengembangkan model AI untuk memprediksi serangan hama berdasarkan data iklim dan cuaca.</p>
+                        <p><strong>Keberhasilan:</strong> Penurunan kerugian panen sebesar 20% karena deteksi dini.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-<section id="proyek" class="content-section">
-    <h3 class="section-title">Proyek</h3>
-    <div class="project-container">
-        <div class="project-box">
-            <div class="chart-container">
-                <div class="circular-chart" data-percentage="95">
-                    <svg viewBox="0 0 36 36" class="circular-chart-svg">
-                        <path class="circle-bg"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                        <path class="circle"
-                            stroke-dasharray="90, 100"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                    </svg>
-                    <div class="percentage">90%</div>
+        <section id="sertifikasi" class="content-section">
+            <h3 class="section-title">Sertifikasi</h3>
+            <div class="certification-box">
+                <div class="certification-grid">
+                    </div>
+                <div class="certification-info">
+                    <p><strong>Lembaga Penyelenggara:</strong> Saya memperoleh sertifikasi dari berbagai lembaga terkemuka, termasuk **BNSP**, **Dicoding Academy**, dan **Coursera**.</p>
                 </div>
+                <button id="show-certificates-btn" class="btn btn-detail">Lihat Detail</button>
             </div>
-            <h4 class="project-title">Proyek Sistem Irigasi Otomatis</h4>
-            <div class="project-details">
-                <p><strong>Waktu:</strong> Maret 2023 - Juli 2023</p>
-                <p><strong>Fokus Proyek:</strong> Mengembangkan dan menerapkan sistem irigasi berbasis sensor untuk menghemat penggunaan air.</p>
-                <p><strong>Keberhasilan:</strong> Penghematan air sebesar 30% dan peningkatan hasil panen 15%.</p>
-            </div>
-        </div>
+        </section>
 
-        <div class="project-box">
-            <div class="chart-container">
-                <div class="circular-chart" data-percentage="85">
-                    <svg viewBox="0 0 36 36" class="circular-chart-svg">
-                        <path class="circle-bg"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                        <path class="circle"
-                            stroke-dasharray="85, 100"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                    </svg>
-                    <div class="percentage">85%</div>
-                </div>
+        <section id="kontak" class="content-section">
+            <h3 class="section-title">Tetap Terhubung</h3>
+            <div class="contact-buttons">
+                <a href="https://wa.me/6281234567890" target="_blank" class="contact-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="mailto:namaanda@example.com" class="contact-btn email-btn">
+                    <i class="fas fa-envelope"></i>
+                    E-mail
+                </a>
+                <a href="https://www.instagram.com/usernameanda" target="_blank" class="contact-btn instagram-btn">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
             </div>
-            <h4 class="project-title">Aplikasi Analisis Tanah</h4>
-            <div class="project-details">
-                <p><strong>Waktu:</strong> Januari 2024 - Sekarang</p>
-                <p><strong>Fokus Proyek:</strong> Membuat aplikasi mobile untuk menganalisis kandungan tanah secara cepat.</p>
-                <p><strong>Keberhasilan:</strong> Pengurangan biaya pengujian tanah hingga 50% untuk petani kecil.</p>
-            </div>
-        </div>
-
-        <div class="project-box">
-            <div class="chart-container">
-                <div class="circular-chart" data-percentage="75">
-                    <svg viewBox="0 0 36 36" class="circular-chart-svg">
-                        <path class="circle-bg"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                        <path class="circle"
-                            stroke-dasharray="75, 100"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                    </svg>
-                    <div class="percentage">75%</div>
-                </div>
-            </div>
-            <h4 class="project-title">Model Prediksi Hama</h4>
-            <div class="project-details">
-                <p><strong>Waktu:</strong> Mei 2022 - Desember 2022</p>
-                <p><strong>Fokus Proyek:</strong> Mengembangkan model AI untuk memprediksi serangan hama berdasarkan data iklim dan cuaca.</p>
-                <p><strong>Keberhasilan:</strong> Penurunan kerugian panen sebesar 20% karena deteksi dini.</p>
-            </div>
-        </div>
-    </div>
-</section>
-         <section id="sertifikasi" class="content-section">
-    <h3 class="section-title">Sertifikasi</h3>
-    <div class="certification-box">
-        <div class="certification-grid">
-            </div>
-        <div class="certification-info">
-            <p><strong>Lembaga Penyelenggara:</strong> Saya memperoleh sertifikasi dari berbagai lembaga terkemuka, termasuk BNSP, Dicoding Academy, dan Coursera.</p>
-        </div>
-        <button id="show-certificates-btn" class="btn btn-detail">Lihat Detail</button>
-    </div>
-</section>
-
-<div id="certification-modal" class="modal">
-    <div class="modal-content certification-modal-content">
-        <span class="close-btn">&times;</span>
-        <div class="certification-detail-container">
-            </div>
-    </div>
-</div>
-
-    <section id="kontak" class="content-section">
-    <h3 class="section-title">Tetap Terhubung</h3>
-    <div class="contact-buttons">
-        <a href="https://wa.me/6281234567890" target="_blank" class="contact-btn whatsapp-btn">
-            <i class="fab fa-whatsapp"></i>
-            WhatsApp
-        </a>
-        <a href="mailto:namaanda@example.com" class="contact-btn email-btn">
-            <i class="fas fa-envelope"></i>
-            E-mail
-        </a>
-        <a href="https://www.instagram.com/usernameanda" target="_blank" class="contact-btn instagram-btn">
-            <i class="fab fa-instagram"></i>
-            Instagram
-        </a>
-    </div>
-</section>
+        </section>
     </main>
+
+    <footer class="footer">
+        <p>Template by <a href="https://maskos.web.id" target="_blank" class="footer-link">Maskos</a></p>
+    </footer>
 
     <div id="experience-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <div class="modal-body">
-                <img src="" alt="" class="modal-photo">
+                <div class="swiper-container experience-swiper">
+                    <div class="swiper-wrapper">
+                        </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                
                 <div class="modal-text">
                     <h4 class="modal-title"></h4>
                     <p class="modal-company"><strong>Nama Perusahaan:</strong> <span></span></p>
@@ -280,9 +282,21 @@
                 </div>
         </div>
     </div>
-  <footer class="footer">
-    <p>Template by <a href="https://maskos.web.id" target="_blank" class="footer-link">Maskos</a></p>
-  </footer>
+    
+    <div id="image-modal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-image" src="" alt="Foto Galeri">
+    </div>
+
+    <div id="certification-modal" class="modal">
+        <div class="modal-content certification-modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="certification-detail-container">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
