@@ -155,9 +155,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Gradasi yang menyatu dengan warna body */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background-image: url('../images/background-agribisnis.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: 1;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 60%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 65%);
 }
 
 .profile-content {
@@ -214,8 +218,8 @@ body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    max-width: 900px; /* Ditambahkan agar konten tidak terlalu lebar di desktop */
-    margin: 0 auto; /* Menempatkan container di tengah */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .skill-box {
@@ -226,7 +230,7 @@ body {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 200px; /* Ukuran dasar box */
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -301,8 +305,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 900px; /* Ditambahkan agar konten tidak terlalu lebar di desktop */
-    margin: 0 auto; /* Menempatkan container di tengah */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .vm-box {
@@ -339,7 +343,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Memberikan jarak antar box */
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -351,7 +355,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    flex-basis: 300px; /* Ukuran dasar setiap box */
+    flex-basis: 300px;
     flex-grow: 1;
     max-width: 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -483,6 +487,45 @@ body {
     margin: 5px 0;
 }
 
+/* Gaya Swiper di Modal */
+.experience-swiper {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.experience-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.experience-swiper .swiper-button-next,
+.experience-swiper .swiper-button-prev {
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.experience-swiper .swiper-button-next:hover,
+.experience-swiper .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.experience-swiper .swiper-button-next::after,
+.experience-swiper .swiper-button-prev::after {
+    font-size: 18px;
+}
+
+.experience-swiper .swiper-pagination-bullet-active {
+    background-color: var(--white);
+}
+
 /* --- Gaya Galeri Modal --- */
 .gallery-modal-content {
     max-width: 95%;
@@ -536,95 +579,12 @@ body {
     display: block;
 }
 
-/* --- Media Queries (Responsivitas) --- */
-@media (max-width: 767px) {
-    .profile-content,
-    .skills-container,
-    .vm-container,
-    .modal-body {
-        flex-direction: column;
-    }
-    
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    /* Memastikan box keahlian dan visi misi tetap rapi */
-    .skill-box,
-    .vm-box {
-        min-width: auto;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-}
-
-@media (min-width: 768px) {
-    .header {
-        justify-content: flex-start;
-        gap: 40px;
-    }
-
-    .nav-toggle {
-        display: none;
-    }
-    
-    .dropdown {
-        position: static;
-        display: block;
-    }
-
-    .nav-menu {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        box-shadow: none;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav-menu a {
-        padding: 0 15px;
-    }
-    
-    .profile-content {
-        flex-direction: row;
-        text-align: left;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .profile-text {
-        text-align: left;
-    }
-
-    .profile-photo {
-        margin-right: 20px;
-    }
-
-    .modal-body {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .modal-photo {
-        width: 300px;
-        height: 300px;
-        flex-shrink: 0;
-    }
-}
-
 /* --- Bagian Proyek --- */
 .project-container {
     display: flex;
-    flex-direction: column; /* Ini akan menata box secara vertikal */
+    flex-direction: column;
     gap: 30px;
-    align-items: center; /* Memastikan box berada di tengah horizontal */
+    align-items: center;
 }
 
 .project-box {
@@ -633,7 +593,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    max-width: 600px; /* Batasi lebar agar tidak terlalu besar di desktop */
+    max-width: 600px;
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -678,7 +638,7 @@ body {
 }
 
 .circular-chart-svg {
-    transform: rotate(-90deg); /* Memulai dari atas */
+    transform: rotate(-90deg);
 }
 
 .circle-bg {
@@ -689,7 +649,7 @@ body {
 
 .circle {
     fill: none;
-    stroke: var(--green-elegant); /* Warna untuk persentase */
+    stroke: var(--green-elegant);
     stroke-width: 3.8;
     stroke-linecap: round;
     transition: stroke-dasharray 0.5s ease-in-out;
@@ -704,7 +664,6 @@ body {
     font-weight: bold;
     color: var(--dark-green-text);
 }
-
 
 /* --- Bagian Sertifikasi --- */
 .certification-box {
@@ -728,7 +687,7 @@ body {
 
 .certification-img {
     width: 100%;
-    height: 100px; /* Ukuran gambar kecil */
+    height: 100px;
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
@@ -866,7 +825,7 @@ body {
 
 .footer-link {
     color: var(--white);
-    text-decoration: underline; /* Memberikan garis bawah pada tautan */
+    text-decoration: underline;
     transition: color 0.3s ease;
 }
 
@@ -874,3 +833,102 @@ body {
     color: var(--light-green);
 }
 
+/* --- Media Queries (Responsivitas) --- */
+@media (max-width: 767px) {
+    .profile-content,
+    .skills-container,
+    .vm-container,
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skill-box,
+    .vm-box {
+        min-width: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-photo {
+        width: 100%;
+        height: auto;
+    }
+
+    .experience-swiper {
+        height: 200px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+    
+    .dropdown {
+        position: static;
+        display: block;
+    }
+
+    .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu a {
+        padding: 0 15px;
+    }
+    
+    .profile-content {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .profile-text {
+        text-align: left;
+    }
+
+    .profile-photo {
+        margin-right: 20px;
+    }
+
+    .modal-body {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .modal-photo {
+        width: 300px;
+        height: 300px;
+        flex-shrink: 0;
+    }
+}
