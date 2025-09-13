@@ -290,7 +290,32 @@ document.addEventListener('DOMContentLoaded', function() {
             tahun: 2024,
             lembaga: 'Coursera',
             hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
+        },
+        {
+            id: 'cert4',
+            thumb: 'img/sertifikat-4-thumb.jpg',
+            full: 'img/sertifikat-4-full.jpg',
+            tahun: 2024,
+            lembaga: 'Coursera',
+            hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
+        },
+        {
+            id: 'cert5',
+            thumb: 'img/sertifikat-5-thumb.jpg',
+            full: 'img/sertifikat-5-full.jpg',
+            tahun: 2024,
+            lembaga: 'Coursera',
+            hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
+        },
+        {
+            id: 'cert6',
+            thumb: 'img/sertifikat-6-thumb.jpg',
+            full: 'img/sertifikat-6-full.jpg',
+            tahun: 2024,
+            lembaga: 'Coursera',
+            hasil: 'Sertifikasi "Agribusiness Management" dari University of Illinois.'
         }
+        
     ];
 
     const certificationGrid = document.querySelector('.certification-grid');
