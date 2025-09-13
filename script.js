@@ -64,31 +64,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Data Pengalaman Magang
     const experiencesData = {
         1: {
-            title: "Magang di Perusahaan A",
-            company: "PT. Agribisnis Jaya",
-            start: "Januari 2023",
-            end: "Juni 2023",
-            result: "Membuat laporan analisis pasar dan meningkatkan efisiensi panen sebesar 15%.",
-            skills: "Analisis data, Manajemen proyek, Komunikasi",
-            fullDesc: "Selama magang, saya bertanggung jawab melakukan analisis data hasil panen menggunakan tools berbasis IoT. Saya juga berpartisipasi aktif dalam tim manajemen proyek untuk mengimplementasikan strategi baru yang berhasil meningkatkan efisiensi panen.",
+            title: "Bekerja di PT Cipta Wira Edukasi",
+            company: "PT Cipta Wira Edukasi",
+            start: "Oktober 2024",
+            end: "Masih Bekerja",
+            result: "Saya bertanggung jawab menyusun dan menyampaikan materi pembelajaran siswa sesuai dengan kurikulum di sekolah, serta membantu kesulitan siswa dalam mengerjakan tugas sekolah",
+            skills: "kemampuan komunikasi efektif, Kemampuan problem solving, pengorganisasian dan perencanaan",
+            fullDesc: "",
             images: [
-                'img/magang-1.jpg',
-                'img/magang-3.jpg',
-                'img/magang-2.jpg'
+                'img/magang-cwe-1.jpg',
+                'img/magang-cwe-2.jpg',
+                'img/magang-cwe-3.jpg'
             ]
         },
         2: {
-            title: "Magang di Perusahaan B",
-            company: "PT. Petani Modern",
-            start: "Juli 2022",
-            end: "Desember 2022",
-            result: "Mengembangkan sistem irigasi otomatis dan menyusun laporan evaluasi kualitas produk.",
-            skills: "Sistem irigasi, Evaluasi kualitas, Riset lapangan",
-            fullDesc: "Saya terlibat dalam proyek pengembangan sistem irigasi otomatis di lahan budidaya hidroponik. Selain itu, saya juga melakukan riset dan evaluasi untuk memastikan kualitas produk memenuhi standar pasar.",
+            title: "Magang di PT Mavens Mitra Perkasa",
+            company: "PT Mavens Mitra Perkasa",
+            start: "Agustus 2023",
+            end: "Oktober 2023",
+            result: "Saya bertanggungjawab untuk mengumpulkan data biaya produksi dan pengeluaran rumah tangga petani, peternak, dan pembudidaya ikan serta melakukan entry data yang tepat pada Gsheets untuk Keperluan analisis Nilai Tukar Petani",
+            skills: "Analisis data dan statistik, pemahaman konsep ekonomi dan pertanian khususnya pada analisis nilai tukar petani",
+            fullDesc: "",
             images: [
-                'img/magang-2.jpg',
-                'img/magang-1.jpg',
-                'img/magang-3.jpg'
+                'img/magang-mmp-1.jpg',
+                'img/magang-mmp-2.jpg',
+                'img/magang-mmp-3.jpg'
             ]
         },
         3: {
@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
             end: "Juni 2023",
             result: "Saya bertanggung jawab untuk memahami dan melakukan tugas-tugas administratif di departemen RnD hingga Product and Market Development",
             skills: "Alur Produksi Benih, Analisis Data Pertanian, Sertifikasi dan Pengendalian Mutu Benih, Kemampuan Kerjasama Tim, Kemampuan beradaptasi dan Pemecahan Masalah",
-            fullDesc: "Pengalaman",
+            fullDesc: "",
             images: [
-                'img/magang-3.jpg',
-                'img/magang-2.jpg',
-                'img/magang-1.jpg'
+                'img/magang-bisi-1.jpg',
+                'img/magang-bisi-2.jpg',
+                'img/magang-bisi-3.jpg'
             ]
         }
     };
@@ -177,12 +177,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Data Galeri
     const galleryPhotos = [
-        'img/magang-1.jpg',
-        'img/magang-2.jpg',
-        'img/magang-3.jpg',
-        'img/magang-2.jpg',
-        'img/magang-1.jpg',
-        'img/magang-1.jpg'
+        'img/magang-cwe-1.jpg',
+        'img/magang-cwe-2.jpg',
+        'img/magang-cwe-3.jpg',
+        'img/magang-mmp-1.jpg',
+        'img/magang-mmp-2.jpg',
+        'img/magang-mmp-3.jpg',
+        'img/magang-bisi-1.jpg',
+        'img/magang-bisi-2.jpg',
+        'img/magang-bisi-3.jpg'
     ];
 
     const galleryModal = document.getElementById('gallery-modal');
