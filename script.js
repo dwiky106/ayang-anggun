@@ -92,13 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         3: {
-            title: "Magang di Perusahaan C",
-            company: "CV. Horti Sejahtera",
-            start: "Maret 2021",
-            end: "Agustus 2021",
-            result: "Membantu proses pemasaran produk sayuran organik dan menyusun strategi penjualan.",
-            skills: "Pemasaran digital, Analisis tren pasar, Penjualan",
-            fullDesc: "Pengalaman ini berfokus pada pemasaran produk hortikultura. Saya belajar banyak tentang strategi pemasaran digital, mengelola media sosial perusahaan, dan menganalisis tren pasar untuk meningkatkan penjualan produk.",
+            title: "MBKM di PT BISI International Tbk",
+            company: "PT BISI International Tbk",
+            start: "Februari 2023",
+            end: "Juni 2023",
+            result: "Saya bertanggung jawab untuk memahami dan melakukan tugas-tugas administratif di departemen RnD hingga Product and Market Development",
+            skills: "Alur Produksi Benih, Analisis Data Pertanian, Sertifikasi dan Pengendalian Mutu Benih, Kemampuan Kerjasama Tim, Kemampuan beradaptasi dan Pemecahan Masalah",
+            fullDesc: "Pengalaman",
             images: [
                 'img/magang-3.jpg',
                 'img/magang-2.jpg',
