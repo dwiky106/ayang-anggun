@@ -199,7 +199,7 @@ body {
 }
 
 .profile-bio {
-    font-size: 0.7em;
+    font-size: 0.8em;
     max-width: 600px;
     margin: 0 auto;
     color: var(--dark-green-text);
