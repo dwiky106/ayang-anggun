@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Nota Transaksi Dinamis Anggun Cell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cetak Struk Ayang Cell</h1>
+
+        <form id="nota-form">
+            <h2>Data Transaksi</h2>
+            
+            <label for="produk">Pilih Produk/Layanan:</label>
+            <select id="produk" required>
+                <option value="" disabled selected>-- Pilih Jenis Transaksi --</option>
+                <option value="PULSA">PULSA</option>
+                <option value="PAKET_DATA">PAKET DATA</option>
+                <option value="TOKEN_LISTRIK">TOKEN LISTRIK</option>
+                <option value="TAGIHAN_LISTRIK">TAGIHAN LISTRIK</option>
+                <option value="TARIK_TUNAI_QRIS">TARIK TUNAI QRIS</option>
+                <option value="TOP_UP_GOPAY">TOP UP GOPAY</option>
+                <option value="TOP_UP_SHOPEE">TOP UP SHOPEE</option>
+                <option value="TOP_UP_DANA">TOP UP DANA</option>
+                <option value="TOP_UP_LINK_AJA">TOP UP LINK AJA</option>
+                <option value="BAYAR_BRIVA">BAYAR TAGIHAN BRIVA</option>
+            </select>
+            
+            <div style="grid-column: 1 / -1;">
+                <label for="status_pembayaran">Status Pembayaran:</label>
+                <select id="status_pembayaran" required>
+                    <option value="" disabled selected>-- Pilih Status --</option>
+                    <option value="Lunas">Lunas</option>
+                    <option value="Belum Lunas">Belum Lunas</option>
+                </select>
+            </div>
+            
+            <div id="dynamic-form-fields">
+                </div>
+
+            <div id="pricing-fields" style="grid-column: 1 / -1; display: none;">
+                 <label for="harga_pokok">Harga (Rp):</label>
+                <input type="number" id="harga_pokok" value="0" min="0" required>
+
+                <label for="biaya_admin">Biaya Admin (Rp):</label>
+                <input type="number" id="biaya_admin" value="0" min="0" required>
+                
+                <p><strong>Total Pembayaran:</strong> <span id="total_display">Rp 0</span></p>
+            </div>
+            
+            <button type="submit">Generate & Preview Nota</button>
+        </form>
+
+        <hr>
+
+        <div class="nota-output">
+            <h2>Preview Nota (Ukuran 5.8 cm)</h2>
+            <div id="nota-area" class="nota-style">
+                <div class="watermark-static">Anggun Cell</div>
+                
+                <div id="watermark-status" class="watermark-dynamic"></div>
+
+                <div class="header">
+                    <img src="Logo-Ayang-Cell.jpg" alt="Logo Toko" class="logo">
+                    <h3>ANGGUN CELL</h3>
+                    <p class="alamat">Jl waringin Rt 02 Rw 05 Dsn Clelek Ds Turus Kec Gampengrejo Kab Kediri (Samping mush alhasan)</p>
+                    <p class="tanggal" id="nota-tanggal"></p>
+                </div>
+                
+                <hr class="divider">
+
+                <div class="detail-section">
+                    <h4>DETAIL TRANSAKSI</h4>
+                    <p><strong>Status:</strong> <span class="success-status">BERHASIL</span></p>
+                    <table class="detail-table" id="output-detail-area">
+                        </table>
+                </div>
+
+                <hr class="divider">
+                
+                <div class="biaya-section">
+                    <table class="biaya-table">
+                        <tr><td>Harga</td><td id="output-harga" class="right"></td></tr>
+                        <tr><td>Biaya Admin</td><td id="output-biaya_admin" class="right"></td></tr>
+                        <tr class="total-row"><td>TOTAL BAYAR</td><td id="output-total" class="right"></td></tr>
+                    </table>
+                </div>
+
+                <hr class="divider">
+                
+                <div class="footer">
+                    <p>Terima kasih telah bertransaksi di Anggun Cell!</p>
+                </div>
+            </div>
+
+            <button id="download-btn" disabled>Download Nota (Gambar PNG)</button>
+        </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

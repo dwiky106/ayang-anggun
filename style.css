@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Styling Formulir --- */
+#nota-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#nota-form h2 {
+    grid-column: 1 / -1;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#produk, #status_pembayaran {
+    grid-column: 1 / -1;
+}
+
+#dynamic-form-fields {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="tel"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    grid-column: 1 / -1;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* --- Styling Total Display di Formulir --- */
+#pricing-fields p {
+    grid-column: 1 / -1;
+    text-align: right;
+    font-size: 1.1em;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+}
+
+/* --- Ukuran Struk Thermal 58mm --- */
+.nota-output {
+    padding: 10px 0;
+}
+
+#download-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#download-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.nota-style {
+    /* LEBAR KERTAS THERMAL 58MM */
+    width: 220px; 
+    padding: 10px; 
+    background-color: #fff;
+    border: 2px dashed #333; 
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 11px; 
+    color: #333;
+    position: relative; 
+    overflow: hidden;
+}
+
+/* Watermark Statis (Nama Toko) */
+.watermark-static {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg); 
+    font-size: 45px; 
+    color: rgba(0, 0, 0, 0.08); 
+    pointer-events: none; 
+    user-select: none;
+    z-index: 10;
+}
+
+/* Watermark Dinamis (Status Pembayaran) */
+.watermark-dynamic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg); 
+    font-size: 50px; /* Ukuran lebih besar dari watermark nama toko */
+    font-weight: bold;
+    pointer-events: none; 
+    user-select: none;
+    z-index: 20; /* Lebih tinggi dari watermark statis */
+    opacity: 0.25; /* Opacity 25% */
+    text-align: center;
+    width: 200%; /* Memastikan menutupi area nota */
+}
+
+/* Warna Watermark */
+.status-lunas {
+    color: #4CAF50; /* Hijau Pudar */
+}
+
+.status-belum-lunas {
+    color: #F44336; /* Merah Pudar */
+}
+
+/* --- Detail Nota (sama seperti sebelumnya) --- */
+.header {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.logo {
+    width: 40px; 
+    height: 40px;
+    margin-bottom: 3px;
+}
+
+.alamat {
+    font-size: 10px;
+    margin-top: -8px;
+    line-height: 1.2;
+}
+
+.tanggal {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.success-status {
+    color: green;
+    font-weight: bold;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px dashed #aaa;
+    margin: 6px 0; 
+}
+
+.detail-section h4 {
+    text-align: center;
+    margin: 4px 0 6px 0;
+    font-size: 12px;
+}
+
+.detail-table, .biaya-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-table td:first-child, .biaya-table td:first-child {
+    width: 50%;
+    padding: 1px 0; 
+}
+
+.detail-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.biaya-table td {
+    padding: 1px 0;
+}
+
+.biaya-table .right {
+    text-align: right;
+    font-weight: bold;
+}
+
+.total-row {
+    font-size: 12px; 
+    font-weight: bolder;
+    border-top: 1px dashed #aaa;
+    margin-top: 5px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 10px;
+}
