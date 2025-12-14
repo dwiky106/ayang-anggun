@@ -113,25 +113,20 @@ button[type="submit"]:hover {
     border: 2px dashed #333; 
     margin: 20px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Courier New', Courier, monospace; 
-    font-size: 11px; 
+    
+    /* MENGGUNAKAN FONT SANS-SERIF DENGAN KETERSEDIAAN MAKSIMUM */
+    font-family: 'Verdana', 'Arial Black', 'Arial', sans-serif; 
+    font-size: 13px;
     color: #333;
     position: relative; 
     overflow: hidden;
+    
+    /* SEMUA TEKS DALAM NOTA DIBUAT BOLD SECARA DEFAULT */
+    font-weight: bold; 
 }
 
-/* Watermark Statis (Nama Toko) */
-.watermark-static {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg); 
-    font-size: 45px; 
-    color: rgba(0, 0, 0, 0.08); 
-    pointer-events: none; 
-    user-select: none;
-    z-index: 10;
-}
+/* Watermark Statis (Nama Toko) - DIHAPUS */
+/* Blok ini dihapus, namun div masih ada di HTML, jadi tetap akan ada spasi kosong */
 
 /* Watermark Dinamis (Status Pembayaran) */
 .watermark-dynamic {
@@ -139,29 +134,36 @@ button[type="submit"]:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg); 
-    font-size: 50px; /* Ukuran lebih besar dari watermark nama toko */
-    font-weight: bold;
+    font-size: 55px; 
+    font-weight: 900; 
     pointer-events: none; 
     user-select: none;
-    z-index: 20; /* Lebih tinggi dari watermark statis */
-    opacity: 0.25; /* Opacity 25% */
+    z-index: 20; 
+    opacity: 0.4; /* Opacity dinaikkan menjadi 40% */
     text-align: center;
-    width: 200%; /* Memastikan menutupi area nota */
+    width: 200%; 
 }
 
 /* Warna Watermark */
 .status-lunas {
-    color: #4CAF50; /* Hijau Pudar */
+    color: #4CAF50; 
 }
 
 .status-belum-lunas {
-    color: #F44336; /* Merah Pudar */
+    color: #F44336; 
 }
 
-/* --- Detail Nota (sama seperti sebelumnya) --- */
+/* --- Detail Nota --- */
 .header {
     text-align: center;
     margin-bottom: 8px;
+}
+
+.header h3 {
+    font-size: 14px; 
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-weight: 900; 
 }
 
 .logo {
@@ -170,32 +172,29 @@ button[type="submit"]:hover {
     margin-bottom: 3px;
 }
 
-.alamat {
-    font-size: 10px;
-    margin-top: -8px;
+.alamat, .tanggal {
+    font-size: 12px;
+    margin-top: -5px;
     line-height: 1.2;
-}
-
-.tanggal {
-    font-size: 10px;
-    margin-top: 5px;
+    font-weight: bold;
 }
 
 .success-status {
     color: green;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .divider {
     border: 0;
-    border-top: 1px dashed #aaa;
-    margin: 6px 0; 
+    border-top: 2px dashed #333; 
+    margin: 8px 0; 
 }
 
 .detail-section h4 {
     text-align: center;
     margin: 4px 0 6px 0;
-    font-size: 12px;
+    font-size: 14px; 
+    font-weight: 900; 
 }
 
 .detail-table, .biaya-table {
@@ -203,35 +202,36 @@ button[type="submit"]:hover {
     border-collapse: collapse;
 }
 
+.detail-table td, .biaya-table td {
+    padding: 2px 0; 
+    font-weight: bold; 
+}
+
 .detail-table td:first-child, .biaya-table td:first-child {
     width: 50%;
-    padding: 1px 0; 
 }
 
 .detail-table td:last-child {
     text-align: right;
-    font-weight: bold;
+    font-weight: 900; 
     word-break: break-all;
-}
-
-.biaya-table td {
-    padding: 1px 0;
 }
 
 .biaya-table .right {
     text-align: right;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .total-row {
-    font-size: 12px; 
-    font-weight: bolder;
-    border-top: 1px dashed #aaa;
+    font-size: 14px; 
+    font-weight: 900;
+    border-top: 2px dashed #333; 
     margin-top: 5px;
 }
 
 .footer {
     text-align: center;
     margin-top: 8px;
-    font-size: 10px;
+    font-size: 12px; 
+    font-weight: bold;
 }
